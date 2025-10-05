@@ -17,7 +17,7 @@ end
 
 --  technically i could make a loop to go over all the game quotes and return the ones that contain interrogator
 --  but uhhhhhhhhh no >:3
-local localization_codes_to_replace = mod:io_dofile("TransvestigatorRannick/scripts/mod/TransvestigatorRannick/localization_codes_containing_rannick")
+local localization_codes_to_replace = mod:io_dofile("TransvestigatorRannick/scripts/mods/TransvestigatorRannick/localization_codes_containing_rannick")
 
 for _, localization_code in ipairs(localization_codes_to_replace) do
     local string_to_replace = managers.localization:_lookup(localization_code)
