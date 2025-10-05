@@ -11,9 +11,20 @@ local string = string
 local string_regex_sub = string.gsub
 
 local function replace_given_string_with_shitpost(string_to_replace)
+    -- string.sub relies on index
     return string_regex_sub(string_to_replace, "Interrogator Rannick", "Transvestigator Rannick")
 end
 
+local localization_codes_to_replace = mod:io_dofile("TransvestigatorRannick/scripts/mod/TransvestigatorRannick/localization_codes_containing_rannick")
+
+for _, localization_code in ipairs(localization_codes_to_replace) do
+    local string_to_replace = managers.localization:_lookup(localization_code)
+    mod:add_global_localize_strings({
+        [localization_code] = {
+            en = replace_given_string_with_shitpost(string_to_replace),
+        }
+    })
+end
 mod:echo(managers.localization:_lookup("loc_boon_vendor_a__mission_habs_redux_start_zone_d_01"))
 mod:echo(replace_given_string_with_shitpost(managers.localization:_lookup("loc_boon_vendor_a__mission_habs_redux_start_zone_d_01")))
 
