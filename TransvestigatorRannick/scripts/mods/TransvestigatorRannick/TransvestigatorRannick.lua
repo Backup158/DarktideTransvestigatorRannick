@@ -15,6 +15,8 @@ local function replace_given_string_with_shitpost(string_to_replace)
     return string_regex_sub(string_to_replace, "Interrogator Rannick", "Transvestigator Rannick")
 end
 
+--  technically i could make a loop to go over all the game quotes and return the ones that contain interrogator
+--  but uhhhhhhhhh no >:3
 local localization_codes_to_replace = mod:io_dofile("TransvestigatorRannick/scripts/mod/TransvestigatorRannick/localization_codes_containing_rannick")
 
 for _, localization_code in ipairs(localization_codes_to_replace) do
@@ -25,13 +27,3 @@ for _, localization_code in ipairs(localization_codes_to_replace) do
         }
     })
 end
-mod:echo(managers.localization:_lookup("loc_boon_vendor_a__mission_habs_redux_start_zone_d_01"))
-mod:echo(replace_given_string_with_shitpost(managers.localization:_lookup("loc_boon_vendor_a__mission_habs_redux_start_zone_d_01")))
-
--- technically i could make a loop to go over all the game quotes and return the ones that contain interrogator
--- but uhhhhhhhhh
---[[
-mod:add_global_localize_strings({
-    
-})
-]]
