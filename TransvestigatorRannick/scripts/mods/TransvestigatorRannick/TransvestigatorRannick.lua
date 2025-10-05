@@ -27,3 +27,10 @@ for _, localization_code in ipairs(localization_codes_to_replace) do
         }
     })
 end
+
+-- too lazy to make this case sensitive
+mod:add_global_localize_strings({
+    loc_past_interrogator_a__story_echo_brahms_16_b_01 = {
+        en = "TRANSVESTIGATOR Rannick",
+    }
+})
