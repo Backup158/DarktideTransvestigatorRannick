@@ -1,0 +1,7 @@
+{
+    "Lua.diagnostics.globals": [
+        "Managers",
+        "class",
+        "get_mod"
+    ]
+}
