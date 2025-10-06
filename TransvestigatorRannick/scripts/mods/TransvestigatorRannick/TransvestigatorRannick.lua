@@ -1,5 +1,5 @@
 local mod = get_mod("TransvestigatorRannick")
-mod.version = "1.0.0"
+mod.version = "1.1.0"
 mod:info("v"..mod.version.." loaded uwu nya :3")
 
 -- 
@@ -28,7 +28,7 @@ for _, localization_code in ipairs(localization_codes_to_replace) do
     })
 end
 
--- too lazy to make this case sensitive
+-- too lazy to make the regex work for all caps
 mod:add_global_localize_strings({
     loc_past_interrogator_a__story_echo_brahms_16_b_01 = {
         en = "TRANSVESTIGATOR Rannick",
